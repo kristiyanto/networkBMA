@@ -17,6 +17,11 @@ RUN apt-get update
 RUN sudo apt-get -q -y install libboost-all-dev
 RUN apt-get clean
 
+# Install Openblas
+RUN echo '/opt/OpenBLAS/lib' > /etc/ld.so.conf.d/openblas.conf
+ADD openblas.sh /tmp/openblash.sh
+RUN bash /tmp/openblash.sh
+
 # Copy NetworkBMA package
 COPY networkBMA_2.10.11.tar.gz /tmp/networkBMA_2.10.11.tar.gz
 
