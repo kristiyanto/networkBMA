@@ -1,4 +1,5 @@
 # This is the Dockefile to build GUIdock (kristiyanto/guidock)
+# https://hub.docker.com/r/uwtbio/networkbma/
 # Base Docker Image
 FROM bioconductor/release_base
 
@@ -24,4 +25,4 @@ RUN echo 'biocLite("RcppArmadillo")' >> /tmp/packages.R
 RUN echo 'install.packages("/tmp/networkBMA_2.10.11.tar.gz", repos = NULL, type="source", dependencies=TRUE)' > /tmp/packages.R \     && Rscript /tmp/packages.R
 
 # Run R on entry
-CMD R
+CMD ["R"]
