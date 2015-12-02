@@ -30,4 +30,4 @@ apt-get clean -y
 
 cd /
 rm -rf /tmp/build
-rm -rf /build_openblas.sh
+# rm -rf /build_openblas.sh
