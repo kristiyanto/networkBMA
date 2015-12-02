@@ -1,7 +1,7 @@
 # This is the Dockefile to build GUIdock (kristiyanto/guidock)
 # https://hub.docker.com/r/uwtbio/networkbma/
 # Base Docker Image
-FROM bioconductor/devel_base
+FROM bioconductor/release_base
 
 
 # Environtment
