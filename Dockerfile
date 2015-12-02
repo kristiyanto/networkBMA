@@ -28,9 +28,9 @@ COPY networkBMA_2.10.11.tar.gz /tmp/networkBMA_2.10.11.tar.gz
 # Install dependencies
 RUN echo 'source("http://bioconductor.org/biocLite.R")' >> /tmp/packages.R
 RUN echo 'biocLite("BMA")' >> /tmp/packages.R
+RUN echo 'biocLite("RcppArmadillo")' >> /tmp/packages.R 
 RUN echo 'biocLite("Rcpp")' >> /tmp/packages.R
 RUN echo 'biocLite("RcppEigen")' >> /tmp/packages.R
-RUN echo 'biocLite("RcppArmadillo")' >> /tmp/packages.R 
 
 # Install Network BMA
 RUN echo 'install.packages("/tmp/networkBMA_2.10.11.tar.gz", repos = NULL, type="source", dependencies=TRUE)' >> /tmp/packages.R \     && Rscript /tmp/packages.R
