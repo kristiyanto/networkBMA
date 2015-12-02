@@ -23,6 +23,3 @@ RUN echo 'biocLite("RcppArmadillo")' >> /tmp/packages.R
 
 # Install Network BMA
 RUN echo 'install.packages("/tmp/networkBMA_2.10.11.tar.gz", repos = NULL, type="source", dependencies=TRUE)' > /tmp/packages.R \     && Rscript /tmp/packages.R
-
-
-cmd ["/bin/bash"]
